@@ -1,0 +1,24 @@
+import api from "./api";
+
+export const getPublicMenu = () => api.get("/customer/menu");
+export const placeOrder = (payload) => api.post("/customer/orders", payload);
+export const getOrderHistory = () => api.get("/customer/orders/history");
+export const bookTable = (payload) => api.post("/customer/bookings", payload);
+export const getStaffTables = () => api.get("/staff/tables");
+export const updateTableStatus = (id, payload) => api.patch(`/staff/tables/${id}/status`, payload);
+export const updateOrderStatus = (id, payload) => api.patch(`/staff/orders/${id}/status`, payload);
+export const getDailyTransactions = () => api.get("/staff/transactions/daily");
+export const getAdminMenu = () => api.get("/admin/menu");
+export const createMenuItem = (payload) => api.post("/admin/menu", payload);
+export const updateMenuItem = (id, payload) => api.put(`/admin/menu/${id}`, payload);
+export const deleteMenuItem = (id) => api.delete(`/admin/menu/${id}`);
+export const getStaffList = () => api.get("/admin/staff");
+export const createStaffMember = (payload) => api.post("/admin/staff", payload);
+export const updateStaffMember = (id, payload) => api.put(`/admin/staff/${id}`, payload);
+export const deleteStaffMember = (id) => api.delete(`/admin/staff/${id}`);
+export const getAllOrders = () => api.get("/admin/orders");
+export const getReports = () => api.get("/admin/reports");
+export const getAdminTables = () => api.get("/admin/tables");
+export const createTable = (payload) => api.post("/admin/tables", payload);
+export const createPaymentOrder = (payload) => api.post("/payments/order", payload);
+export const verifyPayment = (payload) => api.post("/payments/verify", payload);

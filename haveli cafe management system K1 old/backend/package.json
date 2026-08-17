@@ -1,0 +1,33 @@
+{
+  "name": "haveli-cafe-management-system-backend",
+  "version": "1.0.0",
+  "description": "Production-ready backend for Haveli Cafe Management System",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "check": "node --check server.js && node --check app.js",
+    "seed:menu": "node scripts/seedMenu.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "cafe-management"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "nodemailer": "^6.9.15",
+    "razorpay": "^2.9.4",
+    "twilio": "^5.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

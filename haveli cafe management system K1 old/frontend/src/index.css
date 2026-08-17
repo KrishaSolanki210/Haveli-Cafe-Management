@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-indigo: #433b76;
+  --brand-indigo-dark: #2f2957;
+  --brand-green: #39b54a;
+  --brand-green-dark: #23943a;
+  --brand-sky: #dff0ff;
+  --brand-panel: #f3f7ff;
+  --brand-ink: #101828;
+  --brand-night: #171d2b;
+  --brand-cream: #f7f0e6;
+  --brand-gold: #e5aa49;
+  --brand-gold-soft: #f8e6c7;
+  --brand-gold-deep: #9a6418;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(229, 170, 73, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8f1e8 0%, #fffaf5 42%, #f5eee5 100%);
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@keyframes floatY {
+  0%,
+  100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(57, 181, 74, 0.45); }
+  100% { box-shadow: 0 0 0 18px rgba(57, 181, 74, 0); }
+}
+
+.animate-float {
+  animation: floatY 5s ease-in-out infinite;
+}
+
+.animate-enter {
+  animation: fadeSlideUp 0.7s ease forwards;
+}
+
+.animate-ring {
+  animation: pulseRing 2.2s infinite;
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(229, 170, 73, 0.16), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(93, 58, 31, 0.09), transparent 30%);
+}
+
+.public-hero {
+  background:
+    linear-gradient(rgba(8, 31, 24, 0.58), rgba(8, 31, 24, 0.52)),
+    linear-gradient(120deg, rgba(67, 59, 118, 0.78), rgba(38, 148, 58, 0.72)),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.browser-shell {
+  backdrop-filter: blur(6px);
+}
+
+.coffee-showcase {
+  background:
+    linear-gradient(rgba(26, 16, 11, 0.5), rgba(26, 16, 11, 0.68)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #6589f3 0%, #4f46b7 100%);
+}
+
+.dashboard-card.alt {
+  background: linear-gradient(135deg, #8f85ff 0%, #5b6ef5 100%);
+}
+
+.dashboard-card.rose {
+  background: linear-gradient(135deg, #fb7b84 0%, #f36b87 100%);
+}
+
+.sidebar-glow {
+  box-shadow: 0 20px 50px rgba(67, 59, 118, 0.16);
+}
+
+.coffee-metric-card {
+  background: linear-gradient(135deg, #1d1511 0%, #5b3d29 100%);
+}
+
+.coffee-metric-card.alt {
+  background: linear-gradient(135deg, #2f2318 0%, #8d5e31 100%);
+}
+
+.coffee-metric-card.rose {
+  background: linear-gradient(135deg, #241912 0%, #b87d3b 100%);
+}
